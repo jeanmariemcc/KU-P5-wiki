@@ -1,0 +1,17 @@
+<main>
+	<h1>Welcome to KingUni Wiki!</h1>
+	<section>
+		<h2>All articles</h2>
+		<div class="spacer">
+			<ul>
+				{{#each data}}
+					<li>
+						<a href="/article/{{id}}">{{title}}</a>
+					</li>
+				{{else}}
+					<h1>No Articles Were Found</h1>
+				{{/each}}
+			</ul>
+		</div>
+	</section>
+</main>
