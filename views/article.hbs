@@ -4,7 +4,10 @@
 		<h2>{{title}}
 			<div class="controls">
 				<a href="/edit/{{id}}">[edit]</a>
-				<a href="/delete/{{id}}">[delete]</a>
+				{{#if match}}
+
+					<a href="/delete/{{id}}">[delete]</a>
+				{{/if}}
 			</div>
 		</h2>
 		<article>

@@ -6,13 +6,28 @@
 	<section>
 		<h2>Register</h2>
 		<div class="spacer">
-			<form>
+			<form action="/register" method="POST">
 				<label>Username:</label>
-				<input type="text" />
+				<input
+					type="text"
+					id="username"
+					name="username"
+					value="{{username}}"
+				/>
 				<label>Password:</label>
-				<input type="password" />
+				<input
+					type="password"
+					id="password"
+					name="password"
+					value="{{password}}"
+				/>
 				<label>Repeat password:</label>
-				<input type="password" />
+				<input
+					type="password"
+					id="repeatPassword"
+					name="repeatPassword"
+					value="{{repeatPassword}}"
+				/>
 				<input type="submit" value="Register" />
 			</form>
 		</div>
