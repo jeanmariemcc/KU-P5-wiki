@@ -1,19 +1,21 @@
-<main>
-	<h1>Welcome to KingUni Wiki!</h1>
-	<div class="spacer">
-		<h2>{{title}}
-			<div class="controls">
+{{! <main>
+	<h1>Welcome to KingUni Wiki!</h1> }}
+<div class="spacer">
+	<h2>{{title}}
+		<div class="controls">
+			{{#if loggedIn}}
 				<a href="/edit/{{id}}">[edit]</a>
-				{{#if match}}
+			{{/if}}
+			{{#if match}}
 
-					<a href="/delete/{{id}}">[delete]</a>
-				{{/if}}
-			</div>
-		</h2>
-		<article>
-			<p>
-				{{description}}
-			</p>
-		</article>
-	</div>
-</main>
+				<a href="/delete/{{id}}">[delete]</a>
+			{{/if}}
+		</div>
+	</h2>
+	<article>
+		<p>
+			{{description}}
+		</p>
+	</article>
+</div>
+{{! </main> }}

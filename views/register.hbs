@@ -1,35 +1,36 @@
-<main>
-	<h1>Welcome to KingUni Wiki!</h1>
-	<section id="notifications">
-		<p>Both passwords should be the same...</p>
-	</section>
-	<section>
-		<h2>Register</h2>
-		<div class="spacer">
-			<form action="/register" method="POST">
-				<label>Username:</label>
-				<input
-					type="text"
-					id="username"
-					name="username"
-					value="{{username}}"
-				/>
-				<label>Password:</label>
-				<input
-					type="password"
-					id="password"
-					name="password"
-					value="{{password}}"
-				/>
-				<label>Repeat password:</label>
-				<input
-					type="password"
-					id="repeatPassword"
-					name="repeatPassword"
-					value="{{repeatPassword}}"
-				/>
-				<input type="submit" value="Register" />
-			</form>
-		</div>
-	</section>
-</main>
+{{! <main>
+	<h1>Welcome to KingUni Wiki!</h1> }}
+{{!-- <section id="notifications" class="{{type}}">
+	<p id="notification-message">{{message}}</p>
+	{{! <p>Both passwords should be the same...</p> }}
+</section> --}}
+<section>
+	<h2>Register</h2>
+	<div class="spacer">
+		<form action="/register" method="POST">
+			<label>Username:</label>
+			<input
+				type="text"
+				id="username"
+				name="username"
+				value="{{username}}"
+			/>
+			<label>Password:</label>
+			<input
+				type="password"
+				id="password"
+				name="password"
+				value="{{password}}"
+			/>
+			<label>Repeat password:</label>
+			<input
+				type="password"
+				id="repeatPassword"
+				name="repeatPassword"
+				value="{{repeatPassword}}"
+			/>
+			<input type="submit" value="Register" />
+		</form>
+	</div>
+</section>
+{{! </main> }}

@@ -1,25 +1,25 @@
-<main>
-	<h1>Welcome to KingUni Wiki!</h1>
-	<section id="featured">
-		<h2>Latests articles</h2>
-		{{#each data}}
-			<div>
-				<article>
-					<h3>{{title}}</h3>
-					<div>
-						<p>
-							{{description}}
-						</p>
-					</div>
-					<div class="controls">
-						<a href="/article/{{id}}">Read more</a>
-					</div>
-				</article>
-			</div>
-		{{else}}
-			<h1>No Articles Were Found</h1>
-		{{/each}}
-		{{! <article>
+{{! <main>
+	<h1>Welcome to KingUni Wiki!</h1> }}
+<section id="featured">
+	<h2>Latests articles</h2>
+	{{#each data}}
+		<div>
+			<article>
+				<h3>{{title}}</h3>
+				<div>
+					<p>
+						{{description}}
+					</p>
+				</div>
+				<div class="controls">
+					<a href="/article/{{id}}">Read more</a>
+				</div>
+			</article>
+		</div>
+	{{else}}
+		<h1>No Articles Were Found</h1>
+	{{/each}}
+	{{! <article>
 			<h3>Telescope</h3>
 			<p>
 				A telescope is an optical instrument that aids in the
@@ -33,7 +33,7 @@
 				<a href="article.html">Read more</a>
 			</div>
 		</article> }}
-		{{! <article>
+	{{! <article>
 			<h3>Planet</h3>
 			<p>
 				A planet is an astronomical body orbiting a star or stellar
@@ -45,5 +45,5 @@
 				<a href="article.html">Read more</a>
 			</div>
 		</article> }}
-	</section>
-</main>
+</section>
+{{! </main> }}
