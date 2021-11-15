@@ -1,10 +1,19 @@
 const fs = require("fs");
+const url = require("url");
+const path = require("path");
+
+const qs = require("querystring");
 const Wiki = require("../models/Wiki");
 const Users = require("../models/Users");
 
-module.exports = function (req, res) {
-	console.log("all articles GET");
+module.exports = (req, res) => {
+	console.log("Searching for an article");
+	let fields = req.body;
+	console.log(fields);
+	let search = fields.search;
+	console.log(search);
 	let user = res.user;
+	console.log(user); // getting the user!
 	let context = {};
 	let loggedIn = false;
 	let userName = " ";
@@ -26,14 +35,22 @@ module.exports = function (req, res) {
 			};
 			return subArticle;
 		});
+		let matchArray = [];
+		for (let i = 0; i < wikiArray.length; i++) {
+			let string = wikiArray[i].title;
+			if (string.includes(search)) {
+				matchArray.push(wikiArray[i]);
+			}
+			// if(wikiArray[i].title)
+		}
 		// console.log(wikiArray);
 		let context = {
-			data: wikiArray,
+			data: matchArray,
 			loggedIn: loggedIn, // this was set after checking for user
 			userName: userName,
 			show: "none",
 		};
 
-		res.render("allarticles", context);
+		res.render("search", context);
 	});
 };
