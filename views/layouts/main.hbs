@@ -19,36 +19,35 @@
 						<input type="text" name="search" />
 						<input type="submit" value="Search" />
 					</form>
-				{{#if loggedIn}}
-					<a href="/create">Create New Article</a>
-				{{/if}}
+					{{#if loggedIn}}
+						<a href="/create">Create New Article</a>
+					{{/if}}
 				</nav>
 			</aside>
 			<div id="container">
 				<header>
-				{{#if loggedIn}}
-					<span>Welcome, {{userName}}!</span>
-					<a href="/logout">[Logout]</a>
-				{{else}}
-					<a href="/login">Login</a>
-					<a href="/register">Register</a>
-				{{/if}}
+					{{#if loggedIn}}
+						<span>Welcome, {{userName}}!</span>
+						<a href="/logout">[Logout]</a>
+					{{else}}
+						<a href="/login">Login</a>
+						<a href="/register">Register</a>
+					{{/if}}
 				</header>
-<main>
-	<h1>Welcome to KingUni Wiki!</h1>
+				<main>
+					<h1>Welcome to KingUni Wiki!</h1>
 
-	<section id="notifications" class="{{show}}">
-	<p id="notification-message">{{message}}</p>
-	{{! <p>Both passwords should be the same...</p> }}
-	</section>
-		{{{body}}}
-</main>		
-        <footer>
+					<section id="notifications" class="{{show}}">
+						<p id="notification-message">{{message}}</p>
+						{{! <p>Both passwords should be the same...</p> }}
+					</section>
+					{{{body}}}
+				</main>
+				<footer>
 					KingUni Wiki &copy; 2020
 				</footer>
 			</div>
 		</div>
-	</body>
 	</body>
 
 </html>
