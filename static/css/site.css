@@ -224,3 +224,9 @@ footer {
 	background-color: #5d89a1;
 	color: white;
 }
+
+.text-style {
+	white-space: pre-wrap;
+	/* text-indent: 5px;
+	text-align: justify; */
+}
