@@ -3,13 +3,13 @@ const Wiki = require("../models/Wiki");
 const Users = require("../models/Users");
 
 module.exports = function (req, res) {
-	console.log("gettng one article");
+	console.log("Editing one article");
 	console.log(req.params);
 	let id;
 	id = req.params.id;
 	// console.log(id);
 	let user = res.user;
-	console.log(user); // getting the user!
+	// console.log(user); // getting the user!
 	let context = {};
 	let loggedIn = false;
 	if (user) {

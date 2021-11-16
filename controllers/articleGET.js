@@ -26,7 +26,7 @@ module.exports = function (req, res) {
 		if (wiki.author == loggedInId) {
 			match = true;
 		}
-		console.log(wiki.description);
+		// console.log(wiki.description);
 		let context = {
 			id: wiki._id,
 			title: wiki.title,
@@ -39,7 +39,7 @@ module.exports = function (req, res) {
 			userName: userName,
 			show: "none",
 		};
-		console.log(context.description);
+		// console.log(context.description);
 
 		res.render("article", context);
 	});
